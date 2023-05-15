@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Día del Libro</title>
   <link rel="stylesheet" href="principal.css">
-  <link rel="shortcut icon" href="icono.jpg" type="image/x-icon" >
-
+  <link rel="shortcut icon" href="imagenes/icono.jpg" type="image/x-icon" >
+  <script async src="JavaScript.js" type="text/JavaScript"></script>
   
 </head>
-<body>
+<body onload="mueveReloj(), carrousel()" >
   
   <h1>Día del Libro</h1>
 <header>
@@ -23,7 +23,7 @@
           <li><a href="quijote.html">El Quijote</a></li>
           <li><a href="hamlet.html">Hamlet</a></li>
         </ul>
-
+        <li><a href="Contacto.html">Contacto</a></li>
     </ul>
   </nav>
   </header>
@@ -33,7 +33,7 @@
          Esta fecha fue elegida en homenaje a la muerte de dos grandes escritores de la literatura mundial:
           Miguel de Cervantes y William Shakespeare.
            La idea de celebrar el Día del Libro surgió en España en 1926, y posteriormente fue adoptada por otros países.</p>
-           <img src="dia-del-libro.png" alt="Dia del libro" class="img-fluid" >
+           <img src="imagenes/dia-del-libro.png" alt="Dia del libro" class="img-fluid" >
   </article>
   
 
@@ -45,9 +45,15 @@
     <li>1984, de George Orwell</li>
     <li>El principito, de Antoine de Saint-Exupéry</li>
   </ul>
-  <div class="carrusel">
-		<div><img src="imagen1.jpg" alt="libros amontonados"></div>
-  </div>
+  <div class="carousel">
+    <button id="retroceder">Retroceder</button>
+    <div id="imagen"></div>
+    <button id="avanzar">Avanzar</button>
+</div>
+<div class="controles">
+    <button id="play">Play</button>
+    <button id="stop" disabled>Stop</button>
+</div>
   <h2>Actividades para celebrar el Día del Libro</h2>
   <ol class="centramos">
     <li>Visitar una biblioteca o librería</li>
@@ -65,6 +71,12 @@
   <p>Miguel de Cervantes es conocido por su obra maestra Don Quijote de la Mancha, considerada una de las obras cumbre de la literatura española.
      William Shakespeare es uno de los dramaturgos más famosos de la historia, autor de obras como Hamlet, Romeo y Julieta y Macbeth. Gabriel García Márquez
      , escritor colombiano, es conocido por su obra Cien años de soledad, una de las obras más importantes del boom latinoamericano.</p>
+  <article id="Reloh">
+    <h3>Pequeño reloj</h3>
+     <form name="f_reloj">
+      <input type="text" name="reloj" id="relojito" size="10"  onfocus="window.document.form_reloj.reloj.blur()">
+    </form>
+  </article>
   <footer>
     <div class="footer">
       <p>Creado por: Jonathan Ramallo Rubio</p>
